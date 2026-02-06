@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – KlipsVault</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Klips<span>Vault</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <section class="auth">
+    <div class="auth-box">
+      <h1>Welcome Back</h1>
+      <p>Login to your KlipsVault account</p>
+
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      
+      <button onclick="login()">Login</button>
+
+      <span>
+        Don’t have an account?
+        <a href="signup.html">Create one</a>
+      </span>
+    </div>
+  </section>
+
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

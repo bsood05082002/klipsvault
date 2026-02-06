@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #050505, #0b0b0b);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.logo span {
+  color: #ff0055;
+}
+
+.logo small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+nav a {
+  color: #ddd;
+  margin-left: 22px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #ff0055;
+  color: #fff !important;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  padding: 120px 20px 90px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 60px);
+  font-weight: 900;
+}
+
+.hero h1 span {
+  color: #ff0055;
+}
+
+.hero p {
+  margin-top: 18px;
+  font-size: 18px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff0055, #ff3d81);
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255,0,85,0.3);
+}
+
+.hero button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= CLIPS ================= */
+
+.clips {
+  padding: 70px 30px 100px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.clips h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.clip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.clip-card {
+  background: #141414;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.clip-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+}
+
+.clip-thumb {
+  height: 170px;
+  background: linear-gradient(135deg, #222, #111);
+  position: relative;
+}
+
+.clip-thumb::after {
+  content: "▶";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: rgba(255,255,255,0.6);
+}
+
+.clip-card p {
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 20px;
+  }
+
+  nav a {
+    margin-left: 14px;
+  }
+
+  .hero {
+    padding: 90px 15px 70px;
+  }
+}
